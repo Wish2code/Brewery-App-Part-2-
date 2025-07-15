@@ -1,0 +1,112 @@
+/*body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #1a1a40, #0d0d1a);
+  color: #747070;
+  min-height: 100vh;
+  /*background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  background-size: cover;
+}*/
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #1a1a40, #0d0d1a);
+  color: #747070;
+  min-height: 100vh;
+  /*background-image: url('https://www.transparenttextures.com/patterns/stardust.png');*/
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.scroll-table {
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1000px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /*margin-top: 1rem;*/
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+thead {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transition: 0.3s ease-in-out;
+}
+
+a {
+  color: #4FC3F7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.input-group {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1rem;
+}
