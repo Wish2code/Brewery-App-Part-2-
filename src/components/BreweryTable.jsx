@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function BreweryTable({ breweries }) {
   return (
     <div className="scroll-table">
@@ -6,35 +8,19 @@ function BreweryTable({ breweries }) {
           <tr>
             <th>Name</th>
             <th>Type</th>
-            <th>Location</th>
-            <th>Phone</th>
-            <th>Website</th>
+            <th>City</th>
+            <th>State</th>
           </tr>
         </thead>
         <tbody>
           {breweries.map(b => (
             <tr key={b.id}>
-              <td>{b.name}</td>
+              <td>
+                <Link to={`/brewery/${b.id}`}>{b.name}</Link>
+              </td>
               <td>{b.brewery_type}</td>
-              <td>{b.city}, {b.state}</td>
-              <td>
-                {b.phone ? (
-                  <a href={`tel:${b.phone}`} style={{ color: "#4FC3F7" }}>
-                    {b.phone}
-                  </a>
-                ) : (
-                  "N/A"
-                )}
-              </td>
-              <td>
-                {b.website_url ? (
-                  <a href={b.website_url} target="_blank" rel="noopener noreferrer" style={{ color: "#4FC3F7" }}>
-                    Website
-                  </a>
-                ) : (
-                  "N/A"
-                )}
-              </td>
+              <td>{b.city}</td>
+              <td>{b.state}</td>
             </tr>
           ))}
         </tbody>
@@ -42,5 +28,6 @@ function BreweryTable({ breweries }) {
     </div>
   );
 }
+
 export default BreweryTable;
 
